@@ -1,0 +1,244 @@
+<html><head> 
+      <script> 
+         //fonction qui Ã©value le chiffre et renvoie la sortie
+         function calculer() 
+         { 
+             
+             let a = document.getElementById("output").value 
+             let b = eval(a) 
+             document.getElementById("output").value = b  
+              
+         } 
+         //fonction qui affiche la valeur
+         function afficher(val) 
+         { 
+              document.getElementById("output").value+=val;
+	     
+         } 
+         //fonction qui efface l'Ã©cran 
+         function effacer() 
+         { 
+             document.getElementById("output").value = "" 
+         }
+
+//fonction plusoumoins
+	//fonction inversÃ©e 1/x
+	function inverse(){
+		var output = document.getElementById("output");
+		var a = 1/output.value;
+		output.value = a;
+	}
+	//fonction avec la fleche
+	function cleanonebyone(){
+		var output = document.getElementById("output").value;
+		document.getElementById("output").value = output.substring(0,output.lenght-1);
+	}
+
+function racine() {
+    output = document.getElementById("output");
+    var resultat = Math.sqrt(output.value);
+    output.value = resultat;
+}
+function puissance() {
+    output = document.getElementById("output");
+    output.value = output.value * output.value;
+}
+
+function puissance3() {
+    output = document.getElementById("output");
+    output.value = output.value * output.value * output.value;
+}
+
+function expo(){
+        output = document.getElementById("output");
+	var resultat = Math.exp(output.value);
+    	output.value = resultat;
+}
+function cosinus(){
+        output = document.getElementById("output");
+        var resultat = Math.cos(output.value);
+        output.value = resultat;
+}
+function sinus(){
+        output = document.getElementById("output");
+        var resultat = Math.sin(output.value);
+        output.value = resultat;
+}
+
+function tan(){
+        output = document.getElementById("output");
+        var resultat = Math.tan(output.value);
+        output.value = resultat;
+}
+
+function tanh(){
+        output = document.getElementById("output");
+        var resultat = Math.tanh(output.value);
+        output.value = resultat;
+}
+function sinh(){
+        output = document.getElementById("output");
+        var resultat = Math.sinh(output.value);
+        output.value = resultat;
+}
+function cosh(){
+        output = document.getElementById("output");
+        var resultat = Math.cosh(output.value);
+        output.value = resultat;
+}
+
+function py() {
+    output = document.getElementById("output");
+    var resultat = Math.PI += " ";
+    output.value += resultat;
+}
+function log() {
+    output = document.getElementById("output");
+    var resultat = Math.log(output.value);
+    output.value = resultat;
+}
+
+function racine() {
+    output = document.getElementById("output");
+    var resultat = Math.sqrt(output.value);
+    output.value = resultat;
+}
+function ln() {
+    output = document.getElementById("output");
+    var resultat = Math.ln(output.value);
+    output.value = resultat;
+}
+
+function puissancex() {
+	
+}
+
+</script>
+      <style>
+	
+	#output{
+  	    width: 100%;
+            text-align: center;
+            height: 50px;
+            border-radius: 20px;
+            border-color: blue;
+            background-color: rgb(252,255,255);
+            font-size: 10px;
+	    
+
+           
+ 	}
+
+	#zero{width:85px;}
+	#moins{width:85px;}
+	div #rel{
+		height:100px;
+	
+	}
+		
+
+
+	.calc{
+ 	 	position:absolute;
+  		background-color:#000808 ;
+  		width:450px;
+  		height:250px;
+            	border: 7px groove rgb(0,9,9);
+            	margin: 5px;
+            	padding-left: 1px;
+            	padding-bottom: 5px;
+                text-align:center;
+		left:480px;
+		top:50px;
+		
+
+	}
+	.calc button{
+		padding-bottom: 5px;
+  		height:40px;
+  		width:40px;
+  		background-color:#000808;
+  		margin : 0px;
+  		color: white;
+		
+	}
+
+
+      </style>
+   </head> 
+   <body> 
+	    <center>
+           <h3>Bienvenue Soyez comme chez vous,faites toutes sorte de calcul avec ma machine </h3>
+    </center>
+
+       <div class="calc">
+         <div> 
+            <input id="output"> 
+            
+         </div>
+ 	<div>
+            <button id="rien" onclick="effacer('rien')">cls</button>
+            <button id="inv" onclick="afficher('inv')">inv</button>
+            <button id="ln" onclick="ln('ln')">ln</button> 
+	    <button id="para1" onclick="afficher('(')">(</button>
+            <button id="para2" onclick="afficher(')')">)</button>
+	    <button id="fleche" onclick="cleanonebyone('&larr;')">&larr;</button>
+            <button id="ce" onclick="effacer('CE')">CE</button>
+	    <button id="c" onclick="effacer()">C</button>
+            <button id="plusmoins" onclick="afficher('&plusmn;')">&plusmn;</button>
+	    <button id="racine" onclick="racine('&radic;')">&radic;</button>
+
+         </div>
+
+         <div> 
+            <button id="int" onclick="afficher('int')">int</button>
+            <button id="sinh" onclick="sinh('sinh')">sinh</button>
+            <button id="sin" onclick="sinus('sin')">sin</button>
+            <button id="carre" onclick="puissance('x^2')">x^2</button>
+            <button id="fact" onclick="afficher('n!')">n!</button>
+            <button id="7" onclick="afficher('7')">7</button> 
+            <button id="8" onclick="afficher('8')">8</button> 
+            <button id="9" onclick="afficher('9')">9</button> 
+            <button id="div" onclick="afficher('/')">/</button>
+            <button id="pourcent" onclick="Pourcentage('%')">%</button> 
+         </div> 
+	 <div> 
+	    <button id="dms" onclick="afficher('dms')">dms</button>
+            <button id="cosh" onclick="cosh('cosh')">cosh</button>              	    <button id="cos" onclick="cosinus('cos')">cos</button>  
+	    <button id="puissancex" onclick="puissancex('^(')">x^y</button>
+            <button id="cube" onclick="afficher('&#8731;')">&#8731;</button>
+	    <button id="4" onclick="afficher('4')">4</button> 
+            <button id="5" onclick="afficher('5')">5</button> 
+            <button id="6" onclick="afficher('6')">6</button> 
+           
+	    <button id="mult" onclick="afficher('*')">*</button> 
+            <button id="division" onclick="inverse('1/x')">1/x</button> 
+
+         </div> 
+         <div>
+            <button id="pi" onclick="py('&#960;')">&#960;</button>
+            <button id="tanh" onclick="tanh('tanh')">tanh</button>
+            <button id="tan" onclick="tan('tan')">tan</button>
+            <button id="puis3" onclick="puissance3('x^3')">x^3</button>
+            <button id="racine4" onclick="afficher('&#8732;')">&#8732;</button>
+	    <button id="1" onclick="afficher('1')">1</button> 
+            <button id="2" onclick="afficher('2')">2</button> 
+            <button id="3" onclick="afficher('3')">3</button> 
+            <button id="moins" onclick="afficher('-')">-</button> 
+	    </div>
+	  <div> 
+            <button id="esp" onclick="afficher('F-E')">F-E</button>
+	    <button id="Exp" onclick="expo('exp')">Exp</button>
+            <button id="Mod" onclick="afficher('Mod')">Mod</button>
+            <button id="log" onclick="log('log')">log</button>
+            <button id="exp10" onclick="puissancex('10^x')">10^x</button>
+            <button id="zero" onclick="afficher('0')">0</button> 
+            <button id="virgule" onclick="afficher(',')">,</button> 
+            <button id="plus" onclick="afficher('+')">+</button>
+	    <button id="egale" onclick="calculer('=')">=</button> 
+         </div>
+
+      </div> 
+    
+
+</body></html>
